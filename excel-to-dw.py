@@ -1,15 +1,18 @@
 import pandas as pd
 import glob
+import sys
 import sqlite3
 from collections import namedtuple
 
 Customer = namedtuple('Customer', ['id', 'cid', 'name'])
 
-conn = sqlite3.connect('warehouse.db')
+dbpath = sys.argv[1]
+
+conn = sqlite3.connect(dbpath)
 c = conn.cursor()
 
 all_tests = {
-                2: [(3,4,5), (2,3,1), 7.5], # albumin: [(columns),(test ids), ccv]
+                2: [(3,4,5), (2,3,1), 7.5], # albumin: [(columns),(method ids), ccv]
                 1: [(6,7,8,9,10,11), (4,5,6,1,7,8), 15.5] # alp
             }
 
@@ -21,7 +24,7 @@ for excel_file in glob.glob('*.xls*'):
             '  LAB   NAME': 'CUSTNAME'
         }, inplace=True)
 
-    trial_id = 238# file name
+    trial_id = int(excel_file.split('Report')[0]) # file name
     for _, d in data.iterrows():
         if pd.isnull(d['NUM']):
             continue
@@ -42,10 +45,13 @@ for excel_file in glob.glob('*.xls*'):
         this_customer = Customer(*customer)
 
         for test_id, results in all_tests.iteritems():
-            print(this_customer.name, test_id)
             methods = [data.columns[i] for i in results[0]]
             for i in range(len(methods)):
                 if pd.notnull(d[methods[i]]):
-                    c.execute('INSERT INTO results(customer_id, test_id, method_id, value, trial, ccv) VALUES (?,?,?,?,?,?)',
-                         (this_customer.id, test_id, results[1][i], d[methods[i]], trial_id, results[2]))
-            conn.commit()
+                    c.execute('SELECT * FROM results WHERE customer_id=%d AND test_id=%d AND method_id=%d AND trial=%d' % (this_customer.id, test_id, results[1][i], trial_id))
+                    # if the result exists, skip
+                    if not c.fetchone():
+                        c.execute('INSERT INTO results(customer_id, test_id, method_id, value, trial, ccv) VALUES (?,?,?,?,?,?)', (this_customer.id, test_id, results[1][i], d[methods[i]], trial_id, results[2]))
+                        conn.commit()
+                    else:
+                        print('The result exists in the database..')

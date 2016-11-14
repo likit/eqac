@@ -1,5 +1,5 @@
 --
--- File generated with SQLiteStudio v3.1.1 on Mon Nov 14 13:22:39 2016
+-- File generated with SQLiteStudio v3.1.1 on Mon Nov 14 13:25:58 2016
 --
 -- Text encoding used: UTF-8
 --
@@ -47,6 +47,9 @@ INSERT INTO methods (id, name) VALUES (23, 'CK-NAC');
 INSERT INTO methods (id, name) VALUES (24, 'colorimatric');
 INSERT INTO methods (id, name) VALUES (25, 'Jaffe-Kinetic');
 INSERT INTO methods (id, name) VALUES (26, 'Jaffe-EP');
+INSERT INTO methods (id, name) VALUES (27, 'GOD');
+INSERT INTO methods (id, name) VALUES (28, 'HK');
+INSERT INTO methods (id, name) VALUES (29, 'GDH');
 
 -- Table: results
 CREATE TABLE results (
@@ -78,6 +81,7 @@ INSERT INTO tests (id, name) VALUES (9, 'cholesterol');
 INSERT INTO tests (id, name) VALUES (10, 'ck');
 INSERT INTO tests (id, name) VALUES (11, 'creatinine');
 INSERT INTO tests (id, name) VALUES (12, 'ggt');
+INSERT INTO tests (id, name) VALUES (13, 'glucose');
 
 -- Table: trial_sum
 CREATE TABLE trial_sum (

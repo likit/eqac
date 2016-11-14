@@ -1,5 +1,5 @@
 --
--- File generated with SQLiteStudio v3.1.1 on Mon Nov 14 13:10:19 2016
+-- File generated with SQLiteStudio v3.1.1 on Mon Nov 14 13:15:14 2016
 --
 -- Text encoding used: UTF-8
 --
@@ -45,6 +45,8 @@ INSERT INTO methods (id, name) VALUES (21, 'ISE-indirect');
 INSERT INTO methods (id, name) VALUES (22, 'enzyme-colorimetric');
 INSERT INTO methods (id, name) VALUES (23, 'CK-NAC');
 INSERT INTO methods (id, name) VALUES (24, 'colorimatric');
+INSERT INTO methods (id, name) VALUES (25, 'Jaffe-Kinetic');
+INSERT INTO methods (id, name) VALUES (26, 'Jaffe-EP');
 
 -- Table: results
 CREATE TABLE results (
@@ -74,6 +76,7 @@ INSERT INTO tests (id, name) VALUES (7, 'calcium');
 INSERT INTO tests (id, name) VALUES (8, 'chloride');
 INSERT INTO tests (id, name) VALUES (9, 'cholesterol');
 INSERT INTO tests (id, name) VALUES (10, 'ck');
+INSERT INTO tests (id, name) VALUES (11, 'creatinine');
 
 -- Table: trial_sum
 CREATE TABLE trial_sum (

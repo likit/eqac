@@ -1,5 +1,5 @@
 --
--- File generated with SQLiteStudio v3.1.1 on Mon Nov 14 14:28:58 2016
+-- File generated with SQLiteStudio v3.1.1 on Mon Nov 14 14:40:08 2016
 --
 -- Text encoding used: UTF-8
 --
@@ -21,9 +21,9 @@ CREATE TABLE methods (
     name TEXT    UNIQUE
                  NOT NULL
 );
-INSERT INTO methods (id, name) VALUES (1, 'vitros');
-INSERT INTO methods (id, name) VALUES (2, 'bcg');
-INSERT INTO methods (id, name) VALUES (3, 'bcp');
+INSERT INTO methods (id, name) VALUES (1, 'Vitros');
+INSERT INTO methods (id, name) VALUES (2, 'BCG');
+INSERT INTO methods (id, name) VALUES (3, 'BCP');
 INSERT INTO methods (id, name) VALUES (4, 'IFCC');
 INSERT INTO methods (id, name) VALUES (5, 'AACC');
 INSERT INTO methods (id, name) VALUES (6, 'DGKC');
@@ -32,8 +32,8 @@ INSERT INTO methods (id, name) VALUES (8, 'REFLO');
 INSERT INTO methods (id, name) VALUES (9, 'DADE');
 INSERT INTO methods (id, name) VALUES (10, 'KE-wout-pyridoxal');
 INSERT INTO methods (id, name) VALUES (11, 'KE-pyridoxal');
-INSERT INTO methods (id, name) VALUES (12, 'enzyme-kinetic');
-INSERT INTO methods (id, name) VALUES (13, 'enzyme');
+INSERT INTO methods (id, name) VALUES (12, 'Enzyme-kinetic');
+INSERT INTO methods (id, name) VALUES (13, 'Enzyme');
 INSERT INTO methods (id, name) VALUES (14, 'Jendrassik-Grof');
 INSERT INTO methods (id, name) VALUES (15, 'Malloy-Evelyn');
 INSERT INTO methods (id, name) VALUES (16, 'DCA/DPD');
@@ -42,24 +42,26 @@ INSERT INTO methods (id, name) VALUES (18, 'CPC/Asenazo');
 INSERT INTO methods (id, name) VALUES (19, 'ISE');
 INSERT INTO methods (id, name) VALUES (20, 'ISE-direct');
 INSERT INTO methods (id, name) VALUES (21, 'ISE-indirect');
-INSERT INTO methods (id, name) VALUES (22, 'enzyme-colorimetric');
+INSERT INTO methods (id, name) VALUES (22, 'Enzyme-Colorimetric');
 INSERT INTO methods (id, name) VALUES (23, 'CK-NAC');
-INSERT INTO methods (id, name) VALUES (24, 'colorimatric');
+INSERT INTO methods (id, name) VALUES (24, 'Colorimatric');
 INSERT INTO methods (id, name) VALUES (25, 'Jaffe-Kinetic');
 INSERT INTO methods (id, name) VALUES (26, 'Jaffe-EP');
 INSERT INTO methods (id, name) VALUES (27, 'GOD');
 INSERT INTO methods (id, name) VALUES (28, 'HK');
 INSERT INTO methods (id, name) VALUES (29, 'GDH');
-INSERT INTO methods (id, name) VALUES (30, 'direct-determination');
+INSERT INTO methods (id, name) VALUES (30, 'Direct-determination');
 INSERT INTO methods (id, name) VALUES (31, 'Phospho.Precip./Polyanioin');
-INSERT INTO methods (id, name) VALUES (32, 'others');
+INSERT INTO methods (id, name) VALUES (32, 'Others');
 INSERT INTO methods (id, name) VALUES (33, 'SSCC');
 INSERT INTO methods (id, name) VALUES (34, 'Molybdenum-EP');
 INSERT INTO methods (id, name) VALUES (35, 'Molybdenum-UV');
-INSERT INTO methods (id, name) VALUES (36, 'biuret-blank');
-INSERT INTO methods (id, name) VALUES (37, 'biuret-unblank');
+INSERT INTO methods (id, name) VALUES (36, 'Biuret-Blank');
+INSERT INTO methods (id, name) VALUES (37, 'Biuret-Unblank');
 INSERT INTO methods (id, name) VALUES (38, 'EnzColorTotalTG');
-INSERT INTO methods (id, name) VALUES (39, 'glycerol-blank');
+INSERT INTO methods (id, name) VALUES (39, 'Glycerol-Blank');
+INSERT INTO methods (id, name) VALUES (40, 'Enzyme-EP-Blank');
+INSERT INTO methods (id, name) VALUES (41, 'Enzyme-EP-Unblank');
 
 -- Table: results
 CREATE TABLE results (
@@ -100,6 +102,7 @@ INSERT INTO tests (id, name) VALUES (18, 'potassium');
 INSERT INTO tests (id, name) VALUES (19, 'protein');
 INSERT INTO tests (id, name) VALUES (20, 'sodium');
 INSERT INTO tests (id, name) VALUES (21, 'triglyceride');
+INSERT INTO tests (id, name) VALUES (22, 'uric-acid');
 
 -- Table: trial_sum
 CREATE TABLE trial_sum (

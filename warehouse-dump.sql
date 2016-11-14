@@ -1,5 +1,5 @@
 --
--- File generated with SQLiteStudio v3.1.1 on Mon Nov 14 12:34:05 2016
+-- File generated with SQLiteStudio v3.1.1 on Mon Nov 14 12:41:38 2016
 --
 -- Text encoding used: UTF-8
 --
@@ -40,6 +40,8 @@ INSERT INTO methods (id, name) VALUES (16, 'DCA/DPD');
 INSERT INTO methods (id, name) VALUES (17, 'Diazonium');
 INSERT INTO methods (id, name) VALUES (18, 'CPC/Asenazo');
 INSERT INTO methods (id, name) VALUES (19, 'ISE');
+INSERT INTO methods (id, name) VALUES (20, 'ISE-direct');
+INSERT INTO methods (id, name) VALUES (21, 'ISE-indirect');
 
 -- Table: results
 CREATE TABLE results (
@@ -66,6 +68,7 @@ INSERT INTO tests (id, name) VALUES (4, 'ast');
 INSERT INTO tests (id, name) VALUES (5, 'bun');
 INSERT INTO tests (id, name) VALUES (6, 'bilirubin');
 INSERT INTO tests (id, name) VALUES (7, 'calcium');
+INSERT INTO tests (id, name) VALUES (8, 'chloride');
 
 -- Table: trial_sum
 CREATE TABLE trial_sum (

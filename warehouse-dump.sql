@@ -1,5 +1,5 @@
 --
--- File generated with SQLiteStudio v3.1.1 on Mon Nov 14 14:25:58 2016
+-- File generated with SQLiteStudio v3.1.1 on Mon Nov 14 14:28:58 2016
 --
 -- Text encoding used: UTF-8
 --
@@ -58,6 +58,8 @@ INSERT INTO methods (id, name) VALUES (34, 'Molybdenum-EP');
 INSERT INTO methods (id, name) VALUES (35, 'Molybdenum-UV');
 INSERT INTO methods (id, name) VALUES (36, 'biuret-blank');
 INSERT INTO methods (id, name) VALUES (37, 'biuret-unblank');
+INSERT INTO methods (id, name) VALUES (38, 'EnzColorTotalTG');
+INSERT INTO methods (id, name) VALUES (39, 'glycerol-blank');
 
 -- Table: results
 CREATE TABLE results (
@@ -97,6 +99,7 @@ INSERT INTO tests (id, name) VALUES (17, 'inorp');
 INSERT INTO tests (id, name) VALUES (18, 'potassium');
 INSERT INTO tests (id, name) VALUES (19, 'protein');
 INSERT INTO tests (id, name) VALUES (20, 'sodium');
+INSERT INTO tests (id, name) VALUES (21, 'triglyceride');
 
 -- Table: trial_sum
 CREATE TABLE trial_sum (

@@ -1,5 +1,5 @@
 --
--- File generated with SQLiteStudio v3.1.1 on Mon Nov 14 13:40:11 2016
+-- File generated with SQLiteStudio v3.1.1 on Mon Nov 14 13:42:08 2016
 --
 -- Text encoding used: UTF-8
 --
@@ -88,6 +88,7 @@ INSERT INTO tests (id, name) VALUES (12, 'ggt');
 INSERT INTO tests (id, name) VALUES (13, 'glucose');
 INSERT INTO tests (id, name) VALUES (14, 'hdl');
 INSERT INTO tests (id, name) VALUES (15, 'ldh');
+INSERT INTO tests (id, name) VALUES (16, 'ldl');
 
 -- Table: trial_sum
 CREATE TABLE trial_sum (
